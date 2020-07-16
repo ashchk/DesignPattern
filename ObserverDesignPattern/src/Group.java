@@ -1,5 +1,5 @@
 
-import java. util. ArrayList;
+import java.util.ArrayList;
 import java.util.*;
 
 class Group implements Subject{ // this class is called subject in observer design pattern
@@ -10,7 +10,7 @@ class Group implements Subject{ // this class is called subject in observer desi
     
     Group(String name){
 		this.name = name;
-	}
+    }
     
     public String getName() {
         return name;
