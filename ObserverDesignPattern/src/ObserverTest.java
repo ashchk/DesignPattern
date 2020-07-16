@@ -1,16 +1,16 @@
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class ObserverTest {
-    public static void main( String[] args ) {
+    private static Scanner scan;
+
+	public static void main( String[] args ) {
         Group grp = new Group("DesignPatternGroup");
         
-        Scanner scan = new Scanner(System.in);
-        User u = new User();
+        scan = new Scanner(System.in);
+        User u = new User("");
         
-        for (int i = 0; i < 4; i++) {
+        for (int i = 1; i <= 4; i++) {
             System.out.print("\nEnter a user name: ");
             String name = scan.nextLine();
             u = new User(name);

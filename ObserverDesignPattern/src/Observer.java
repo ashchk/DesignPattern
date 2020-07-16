@@ -1,5 +1,4 @@
 
-public abstract class Observer {	
-	protected Group grp;
-    public abstract void update(); //observers must extend these function
+public interface Observer {	//observers must implement this interface
+    public abstract void update(String post);
 }

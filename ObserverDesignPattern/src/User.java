@@ -1,26 +1,19 @@
 
-import java.util.*;
-
-class User extends Observer {
-    private String name;
+class User implements Observer {
     
-    User(){
-		this.name = "Empty";
-	}
+	private String name;
     
     User(String name){
 		this.name = name;
 	}
 	
 	public void Subscribe(Group grp) {
-		this.grp = grp;
-		this.grp.addObserver(this);
-		System.out.print(this.name+" subscribes "+grp.getName()+"\n");
+		grp.registerObserver(this);
+		System.out.print("\n"+this.name+" subscribes "+grp.getName()+"\n");
 	}
 	
 	public void unSubscribe(Group grp) {
-		this.grp = grp;
-		this.grp.removeObserver(this);
+		grp.removeObserver(this);
 		System.out.print("\n"+this.name+" unsubscribes "+grp.getName()+"\n");
 	}
 	
@@ -28,7 +21,7 @@ class User extends Observer {
         return name;
     }
 
-    public void update() {
-        System.out.print(this.name +" got new post: " + grp.getPost()+"\n");
+    public void update(String post) {
+        System.out.print("\n"+this.name +" got new post: " + post +"\n");
     }
 }
