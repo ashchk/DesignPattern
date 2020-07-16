@@ -9,15 +9,7 @@ class Group implements Subject{ // this class is called subject in observer desi
     private String name;
     
     Group(String name){
-		this.name = name;
-    }
-    
-    public String getName() {
-        return name;
-    }
-
-    public String getPost() {
-        return post;
+	this.name = name;
     }
 
     public void newPost(String post) {
@@ -37,5 +29,13 @@ class Group implements Subject{ // this class is called subject in observer desi
     
     public void removeObserver(Observer o) {
         observers.remove(o); //remove observer object from list 
+    }
+	
+    public String getName() {
+        return name;
+    }
+
+    public String getPost() {
+        return post;
     }
 }
